@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a24">
+  <meta name="description" content="PUCARÁ Seguridad Estratégica. Consultoría, auditorías y planes de seguridad para comercios y pequeñas empresas en Zona Sur del Gran Buenos Aires y a distancia.">
+  <title>PUCARÁ Seguridad Estratégica | Prevenir. Proteger. Planificar.</title>
+  <style>
+    :root{--navy:#111a24;--navy2:#1b2938;--gold:#caa566;--paper:#f4f5f6;--ink:#182330;--muted:#5b6672;--white:#fff;--line:#dfe4e8}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:var(--white)}
+    a{color:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{background:rgba(17,26,36,.97);color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(202,165,102,.35)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .mark{width:44px;height:44px;border:2px solid var(--gold);clip-path:polygon(50% 0,95% 25%,95% 75%,50% 100%,5% 75%,5% 25%);display:grid;place-items:center;color:var(--gold);font-weight:800;font-size:19px}
+    .brand strong{display:block;letter-spacing:2px;font-size:19px;line-height:1.15}
+    .brand small{display:block;color:var(--gold);font-size:10px;letter-spacing:1.5px;margin-top:4px}
+    nav{display:flex;align-items:center;gap:22px}
+    nav a{text-decoration:none;font-size:14px;color:#edf0f3}
+    nav a:hover{color:var(--gold)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;border-radius:5px;padding:12px 18px;transition:.2s}
+    .nav-cta,.btn-gold{background:var(--gold);color:#101720}
+    .nav-cta:hover,.btn-gold:hover{background:#e0bd82;transform:translateY(-1px)}
+    .hero{background:radial-gradient(ellipse at 80% 10%,#2a3d50 0,transparent 38%),linear-gradient(120deg,var(--navy),#1a2938);color:white;padding:92px 0 84px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:52px;align-items:center}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2.4px;font-size:12px;font-weight:700}
+    h1{font-size:clamp(38px,5vw,62px);line-height:1.08;letter-spacing:-1.5px;margin:18px 0}
+    h1 span{color:var(--gold)}
+    .hero p{font-size:18px;color:#d7dee5;max-width:640px;margin:0 0 28px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-outline{border:1px solid #788694;color:white}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+    .hero-note{margin-top:25px;color:#aeb9c4;font-size:13px}
+    .emblem{aspect-ratio:1;max-width:320px;margin:auto;border:1px solid rgba(202,165,102,.55);border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle,#253749,#111a24 68%);box-shadow:0 0 0 15px rgba(255,255,255,.025),0 0 70px rgba(0,0,0,.2)}
+    .emblem:before,.emblem:after{content:"";position:absolute;border:1px solid rgba(202,165,102,.35);inset:22px;border-radius:50%}
+    .emblem:after{inset:43px}
+    .emblem-inner{text-align:center;position:relative;z-index:1}
+    .emblem-inner .big{font-size:84px;color:var(--gold);font-weight:800;line-height:1}
+    .emblem-inner small{display:block;color:#e5d1ac;letter-spacing:3px;font-size:10px;margin-top:14px}
+    section{padding:76px 0}
+    .section-light{background:var(--paper)}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+    .section-head h2{font-size:clamp(28px,3.5vw,40px);line-height:1.2;margin:10px 0 14px;color:var(--navy)}
+    .section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;border:1px solid var(--line);border-radius:9px;padding:27px;box-shadow:0 8px 24px rgba(17,26,36,.04)}
+    .card-icon{width:45px;height:45px;display:grid;place-items:center;background:#f4ead9;color:#785c2c;border-radius:8px;font-size:22px;margin-bottom:18px}
+    .card h3{margin:0 0 10px;color:var(--navy);font-size:20px}
+    .card p{margin:0;color:var(--muted);font-size:15px}
+    .approach{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .approach h2{font-size:clamp(28px,3.5vw,40px);line-height:1.2;margin:10px 0 18px}
+    .approach p{color:var(--muted)}
+    .checklist{list-style:none;padding:0;margin:24px 0 0}
+    .checklist li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--line)}
+    .checklist li:before{content:"✓";position:absolute;left:0;color:#9a7538;font-weight:800}
+    .quote-panel{background:var(--navy);color:white;border-radius:12px;padding:34px;position:relative;overflow:hidden}
+    .quote-panel:after{content:"P";position:absolute;right:0;bottom:-70px;font-size:260px;color:rgba(255,255,255,.035);font-weight:900}
+    .quote-panel h3{font-size:25px;margin:0 0 14px;position:relative;z-index:1}
+    .quote-panel p{color:#d5dde4;position:relative;z-index:1}
+    .quote-panel .tag{display:inline-block;border:1px solid rgba(202,165,102,.5);color:var(--gold);border-radius:30px;padding:7px 12px;font-size:12px;margin:5px 5px 0 0}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
+    .contact-info h2{font-size:36px;line-height:1.15;margin:10px 0 16px}
+    .contact-info p{color:var(--muted)}
+    .contact-detail{padding:14px 0;border-bottom:1px solid var(--line)}
+    .contact-detail strong{display:block;color:var(--navy);font-size:13px;text-transform:uppercase;letter-spacing:1px}
+    .contact-detail span{color:var(--muted)}
+    form{background:white;border:1px solid var(--line);padding:28px;border-radius:10px;box-shadow:0 8px 24px rgba(17,26,36,.05)}
+    label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+    input,select,textarea{width:100%;padding:12px 13px;border:1px solid #cbd3da;border-radius:5px;font:inherit;background:white;color:var(--ink);margin-bottom:17px}
+    input:focus,select:focus,textarea:focus{outline:2px solid #caa566;outline-offset:1px}
+    textarea{min-height:120px;resize:vertical}
+    .submit{border:0;cursor:pointer;width:100%;font-size:15px}
+    .form-note{font-size:12px;color:var(--muted);margin:12px 0 0}
+    footer{background:#0b1118;color:#c7cfd7;padding:26px 0}
+    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer strong{color:white;letter-spacing:1px}
+    footer small{color:#9ca8b4}
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:9;background:#1e8e55;color:white;border-radius:40px;padding:13px 17px;text-decoration:none;font-weight:700;box-shadow:0 8px 22px #0003}
+    .wa-float:hover{background:#167443}
+    @media(max-width:800px){nav{gap:12px}nav a:not(.nav-cta){display:none}.hero{padding:65px 0}.hero-grid,.approach,.contact-grid{grid-template-columns:1fr}.emblem{max-width:230px}.cards{grid-template-columns:1fr}.approach{gap:28px}section{padding:58px 0}.contact-info h2{font-size:32px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="PUCARÁ Seguridad, inicio">
+      <span class="mark" aria-hidden="true">P</span>
+      <span><strong>PUCARÁ</strong><small>SEGURIDAD ESTRATÉGICA</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a><a href="#metodo">Enfoque</a><a href="#contacto">Contacto</a>
+      <a class="nav-cta" href="#contacto">Solicitar asesoramiento</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Consultoría · Prevención · Protección de activos</div>
+        <h1>La seguridad empieza con <span>una buena estrategia.</span></h1>
+        <p>Ayudamos a comercios y pequeñas empresas a identificar riesgos, fortalecer sus medidas de protección y tomar decisiones de seguridad con criterio profesional.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contacto">Quiero asesoramiento</a>
+          <a class="btn btn-outline" href="#servicios">Conocer los servicios</a>
+        </div>
+        <div class="hero-note">Atención presencial en Zona Sur del Gran Buenos Aires y consultas a distancia.</div>
+      </div>
+      <div class="emblem" aria-label="Emblema gráfico de PUCARÁ">
+        <div class="emblem-inner"><div class="big">P</div><small>PREVENIR · PROTEGER · PLANIFICAR</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Qué hacemos</div>
+        <h2>Soluciones de seguridad adaptadas a tu actividad</h2>
+        <p>Un enfoque práctico para reconocer vulnerabilidades, ordenar prioridades y mejorar la prevención sin perder de vista la realidad operativa de cada organización.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">⌕</div>
+          <h3>Consultoría en seguridad</h3>
+          <p>Orientación profesional para evaluar necesidades, definir prioridades y diseñar medidas preventivas acordes al negocio.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">◈</div>
+          <h3>Auditorías y diagnóstico</h3>
+          <p>Revisión de instalaciones, procedimientos y controles existentes para identificar oportunidades de mejora y riesgos relevantes.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">▤</div>
+          <h3>Planes de seguridad</h3>
+          <p>Elaboración de recomendaciones, protocolos y planes de acción para fortalecer la prevención, la respuesta y la continuidad operativa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light" id="metodo">
+    <div class="wrap approach">
+      <div>
+        <div class="eyebrow">Nuestro enfoque</div>
+        <h2>Prevenir antes que improvisar.</h2>
+        <p>La seguridad efectiva combina personas, procedimientos, tecnología y evaluación permanente. Cada recomendación debe responder a riesgos concretos y ser viable para quien la implementa.</p>
+        <ul class="checklist">
+          <li>Identificación y priorización de riesgos.</li>
+          <li>Protección de activos, instalaciones e información.</li>
+          <li>Recomendaciones claras y aplicables.</li>
+          <li>Seguimiento de acciones de mejora.</li>
+        </ul>
+      </div>
+      <aside class="quote-panel">
+        <h3>Una mirada profesional sobre tus riesgos.</h3>
+        <p>Podemos comenzar con una conversación inicial para entender tu actividad, los problemas que querés resolver y el alcance adecuado del servicio.</p>
+        <span class="tag">Comercios</span><span class="tag">Pequeñas empresas</span><span class="tag">Protección de activos</span><span class="tag">Seguridad bancaria</span>
+      </aside>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <div class="eyebrow">Hablemos</div>
+        <h2>Contanos qué necesitás proteger.</h2>
+        <p>Completá el formulario y coordinaremos el próximo paso. No incluyas contraseñas, datos bancarios ni información confidencial en tu consulta.</p>
+        <div class="contact-detail"><strong>Zona de atención</strong><span>Zona Sur del Gran Buenos Aires · Consultas a distancia en Argentina</span></div>
+        <div class="contact-detail"><strong>Servicios</strong><span>Consultoría · Auditorías · Planes de seguridad</span></div>
+        <div class="contact-detail"><strong>Contacto directo</strong><span>El botón de WhatsApp se habilita al configurar tu número comercial.</span></div>
+      </div>
+      <form name="consultas-pucara" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+        <input type="hidden" name="form-name" value="consultas-pucara">
+        <p hidden><label>No completar este campo: <input name="bot-field"></label></p>
+        <label for="nombre">Nombre y apellido</label>
+        <input id="nombre" name="nombre" autocomplete="name" required placeholder="Tu nombre">
+        <label for="empresa">Comercio o empresa (opcional)</label>
+        <input id="empresa" name="empresa" autocomplete="organization" placeholder="Nombre del negocio">
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="nombre@correo.com">
+        <label for="servicio">¿En qué podemos ayudarte?</label>
+        <select id="servicio" name="servicio" required>
+          <option value="">Seleccioná una opción</option>
+          <option>Consultoría en seguridad</option>
+          <option>Auditoría o diagnóstico</option>
+          <option>Plan de seguridad</option>
+          <option>Protección de activos</option>
+          <option>Otro / necesito orientación</option>
+        </select>
+        <label for="mensaje">Contanos brevemente tu consulta</label>
+        <textarea id="mensaje" name="mensaje" required placeholder="Describí tu necesidad sin incluir información sensible."></textarea>
+        <button class="btn btn-gold submit" type="submit">Enviar consulta</button>
+        <p class="form-note">Este formulario requiere publicar el sitio en Netlify para recibir y administrar consultas. Antes de lanzarlo, configurá un correo de notificación y revisá el aviso de privacidad.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div><strong>PUCARÁ SEGURIDAD ESTRATÉGICA</strong><br><small>Prevenir. Proteger. Planificar.</small></div>
+    <small>© <span id="year"></span> PUCARÁ Seguridad. Todos los derechos reservados.</small>
+  </div>
+</footer>
+
+<a class="wa-float" id="whatsapp" href="#contacto" aria-label="Contactar por WhatsApp">WhatsApp · Consultas</a>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ANTES DE PUBLICAR: reemplazá el número de ejemplo por tu WhatsApp comercial.
+  // Formato internacional: código de país + área + número, solo dígitos.
+  // Ejemplo de formato argentino: 54911XXXXXXXX
+  const WHATSAPP_NUMBER = "54911XXXXXXXX";
+  const whatsappLink = document.getElementById("whatsapp");
+  whatsappLink.addEventListener("click", function(event) {
+    if (!/^[0-9]{10,15}$/.test(WHATSAPP_NUMBER) || WHATSAPP_NUMBER.includes("X")) {
+      event.preventDefault();
+      alert("El WhatsApp comercial todavía no está configurado. Editá WHATSAPP_NUMBER en index.html antes de publicar.");
+      return;
+    }
+    event.preventDefault();
+    const message = encodeURIComponent("Hola, quiero realizar una consulta sobre los servicios de PUCARÁ Seguridad.");
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + message, "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
